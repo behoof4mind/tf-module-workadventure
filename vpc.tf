@@ -10,7 +10,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "${var.domain_name}-${var.environment_name}"
+  cluster_name = "${var.domain_name}_${var.environment_name}"
 }
 
 module "vpc" {
