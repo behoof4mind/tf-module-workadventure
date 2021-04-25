@@ -10,7 +10,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "workadventrure_${var.environment_name}"
+  cluster_name = "workadventrure"
 }
 
 module "vpc" {
