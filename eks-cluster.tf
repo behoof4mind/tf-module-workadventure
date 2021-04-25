@@ -5,6 +5,7 @@ module "eks" {
   subnets         = module.vpc.private_subnets
 
   tags = {
+    Service     = "workadventrure"
     Environment = var.environment_name
   }
 

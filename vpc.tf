@@ -27,6 +27,8 @@ module "vpc" {
   enable_dns_hostnames = true
 
   tags = {
+    Service     = "workadventrure"
+    Environment = var.environment_name
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
   }
 

@@ -18,4 +18,8 @@ provider "kubernetes" {
       data.aws_eks_cluster.cluster.name
     ]
   }
+  tags = {
+    Service     = "workadventrure"
+    Environment = var.environment_name
+  }
 }
