@@ -19,7 +19,7 @@ set -Ux AWS_SECRET_ACCESS_KEY <YOUR AWS_SECRET_ACCESS_KEY>
 Create main.tf file
 ```yaml
 module "webserver_cluster" {
-  source                          = "github.com/behoof4mind/tf-module-workadventure?ref=0.0.1" # specify module version here
+  source                          = "github.com/behoof4mind/tf-module-workadventure?ref=0.0.1"
   eks_region                      = "us-east-2"
   eks_cluster_version             = "1.18"
   environment_name                = "dev"
@@ -30,6 +30,8 @@ module "webserver_cluster" {
   worker_group_2_desired_capacity = 1
 
 ```
+_- these variables in example are default, if you don't want to override them - only source filed can be specified;_<br>
+_- dont forget to use latest varion of module in ref=0.0.1 notation_
 
 Make init
 ```shell
@@ -43,7 +45,7 @@ terraform apply
 
 ## Contributing
 
-Thanks for considering contributing! There’s information about how to [get started with Workadventure module here](CONTRIBUTE.md).
+Thanks for considering contributing! There’s information about how to [get started with Workadventure module](CONTRIBUTE.md)
 
 ## License
 
