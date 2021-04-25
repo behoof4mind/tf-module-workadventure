@@ -15,7 +15,7 @@ We love pull requests. Here’s a quick guide:
 1. [Fork this repository](https://github.com/behoof4mind/tf-module-workadventure) and then clone it locally:
 
   ```bash
-  git clone git@github.com:behoof4mind/tf-module-workadventure.git
+  git clone git@github.com:<YOUR_GITHUB_USERNAME>/tf-module-workadventure.git
   ```
 
 2. Create a topic branch for your changes:
