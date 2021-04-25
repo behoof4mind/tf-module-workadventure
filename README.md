@@ -43,7 +43,7 @@ terraform apply
 
 ## Contributing
 
-Thanks for considering contributing! There’s information about how to [get started with Myservice module here](CONTRIBUTE.md).
+Thanks for considering contributing! There’s information about how to [get started with Workadventure module here](CONTRIBUTE.md).
 
 ## License
 
