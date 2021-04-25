@@ -29,13 +29,11 @@ variable "worker_group_2_instance_type" {
 }
 
 variable "worker_group_1_desired_capacity" {
-  description = "t2.small, t2.medium etc"
   type        = number
   default     = 2
 }
 
 variable "worker_group_2_desired_capacity" {
-  description = "t2.small, t2.medium etc"
   type        = number
   default     = 1
 }
