@@ -20,8 +20,8 @@ variable "domain_name" {
 
 variable "ns_servers_list" {
   description = "List of NS servers for your Route53 Hosted Zone"
-  type    = list(string)
-  default = ["ns-1395.awsdns-46.org.", "ns-742.awsdns-28.net.", "ns-53.awsdns-06.com.", "ns-1635.awsdns-12.co.uk."]
+  type        = list(string)
+  default     = ["ns-1395.awsdns-46.org.", "ns-742.awsdns-28.net.", "ns-53.awsdns-06.com.", "ns-1635.awsdns-12.co.uk."]
 }
 
 variable "worker_group_1_instance_type" {
@@ -35,11 +35,11 @@ variable "worker_group_2_instance_type" {
 }
 
 variable "worker_group_1_desired_capacity" {
-  type        = number
-  default     = 2
+  type    = number
+  default = 2
 }
 
 variable "worker_group_2_desired_capacity" {
-  type        = number
-  default     = 1
+  type    = number
+  default = 1
 }

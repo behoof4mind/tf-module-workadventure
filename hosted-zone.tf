@@ -8,9 +8,10 @@ resource "aws_route53_zone" "main" {
 }
 
 resource "aws_route53_record" "main-ns" {
-  zone_id = aws_route53_zone.main.zone_id
-  name    = var.domain_name
-  type    = "NS"
-  ttl     = "3600"
-  records = var.ns_servers_list
+  zone_id         = aws_route53_zone.main.zone_id
+  name            = var.domain_name
+  type            = "NS"
+  ttl             = "3600"
+  allow_overwrite = true
+  records         = var.ns_servers_list
 }
