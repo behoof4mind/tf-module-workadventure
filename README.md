@@ -33,7 +33,7 @@ module "webserver_cluster" {
 ```
 _- these variables in example are default, if you don't want to override them - only source filed can be specified;_<br>
 _- dont forget to use latest varion of module in ref=0.0.1 notation_
-
+_- keep in mind that `ns_servers_list` should be the same as in you registered domain NS servers list_
 Make init
 ```shell
 terraform init
