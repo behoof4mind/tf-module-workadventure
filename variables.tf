@@ -18,6 +18,12 @@ variable "domain_name" {
   default     = "workadventure-game.link"
 }
 
+variable "ns_servers_list" {
+  description = "List of NS servers for your Route53 Hosted Zone"
+  type    = list(string)
+  default = ["ns-1395.awsdns-46.org.", "ns-742.awsdns-28.net.", "ns-53.awsdns-06.com.", "ns-1635.awsdns-12.co.uk."]
+}
+
 variable "worker_group_1_instance_type" {
   description = "t2.small, t2.medium etc"
   default     = "t2.small"
