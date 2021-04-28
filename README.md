@@ -17,19 +17,23 @@ set -Ux AWS_SECRET_ACCESS_KEY <YOUR AWS_SECRET_ACCESS_KEY>
 ```
 
 Create main.tf file
-```yaml
+```terraform
 module "webserver_cluster" {
-  source                          = "github.com/behoof4mind/tf-module-workadventure?ref=0.0.9"
-  eks_region                      = "us-east-2"
-  eks_cluster_version             = "1.18"
-  environment_name                = "dev"
-  domain_name                     = "workadventure-game.link"
-  ns_servers_list                 = ["ns-1395.awsdns-46.org.", "ns-742.awsdns-28.net.", "ns-53.awsdns-06.com.", "ns-1635.awsdns-12.co.uk."]
-  worker_group_1_instance_type    = "t2.small"
-  worker_group_2_instance_type    = "t2.medium"
+  source = "github.com/behoof4mind/tf-module-workadventure?ref=0.0.9"
+  eks_region = "us-east-2"
+  eks_cluster_version = "1.18"
+  environment_name = "dev"
+  domain_name = "workadventure-game.link"
+  ns_servers_list = [
+    "ns-1395.awsdns-46.org.",
+    "ns-742.awsdns-28.net.",
+    "ns-53.awsdns-06.com.",
+    "ns-1635.awsdns-12.co.uk."]
+  worker_group_1_instance_type = "t2.small"
+  worker_group_2_instance_type = "t2.medium"
   worker_group_1_desired_capacity = 2
   worker_group_2_desired_capacity = 1
-
+}
 ```
 _- these variables in example are default, if you don't want to override them - only source filed can be specified;_<br>
 _- dont forget to use latest varion of module in ref=0.0.1 notation_
